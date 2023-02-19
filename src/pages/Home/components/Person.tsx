@@ -18,11 +18,13 @@ export const Person = ({ character }: IPersonProps) => {
   return (
     <Link key={character.name} to={url} onClick={() => saveLastUrl(url)}>
       <div className="py-4 flex items-center">
-        <img
-          className="w-16 h-16 rounded-full"
-          src={charImage.selectImage(character.name)}
-          alt={character.name}
-        />
+        <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-600">
+          <img
+            className="w-full h-full object-contain"
+            src={charImage.selectImage(character.name)}
+            alt={character.name}
+          />
+        </div>
         <div className="ml-4">
           <p className="text-white font-semibold mb-2">{character.name}</p>
           <p className="text-gray-300 text-sm">

@@ -47,7 +47,7 @@ export class CharacterImage {
         return this.leia;
       case "Owen Lars":
         return this.owen;
-      case "Beru Whitesun Iars":
+      case "Beru Whitesun lars":
         return this.beru;
       case "R5-D4":
         return this.r5d4;

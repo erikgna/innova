@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <section className="flex justify-center bg-gray-700 px-4">
+      <section className="flex justify-center bg-gray-800 px-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/character/:id" element={<Character />} />

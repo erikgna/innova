@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
+import { Loading } from "../../components/Loading/Loading";
+import { Error } from "../../components/Error/Error";
 import { Search } from "../../components/Search/Search";
 import { IPeople } from "../../interfaces/People";
 import { getAllPeoples } from "../../services/api";
@@ -15,11 +17,11 @@ export const Home = () => {
   const [search, setSearch] = useState<string>("");
 
   if (isLoading) {
-    return <h1>...Loading</h1>;
+    return <Loading />;
   }
 
   if (isError) {
-    return <h2>Ops... Ocorreu um erro</h2>;
+    return <Error text="Não foi possível recuperar os personagens." />;
   }
 
   const peoples = data?.data.results as IPeople[];
