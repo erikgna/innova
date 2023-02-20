@@ -1,7 +1,6 @@
 {
   "homepage": "http://erikgna.github.io/innova",
   "name": "start-wars-wiki",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {

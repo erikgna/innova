@@ -42,18 +42,20 @@ export const Navbar = () => {
               >
                 <Link to="/">Personagens</Link>
               </li>
-              <li
-                onClick={() => setMenu(false)}
-                className={`mt-2 w-full px-2 py-2 text-white ease-linear duration-300  ${
-                  location.pathname.includes("character")
-                    ? "bg-blue-600"
-                    : "hover:bg-gray-700"
-                }`}
-              >
-                <Link to={localStorage.getItem("last-url") ?? "/"}>
-                  Último acesso
-                </Link>
-              </li>
+              {localStorage.getItem("last-url") && (
+                <li
+                  onClick={() => setMenu(false)}
+                  className={`mt-2 w-full px-2 py-2 text-white ease-linear duration-300  ${
+                    location.pathname.includes("character")
+                      ? "bg-blue-600"
+                      : "hover:bg-gray-700"
+                  }`}
+                >
+                  <Link to={localStorage.getItem("last-url") ?? "/"}>
+                    Último acesso
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         )}
@@ -65,15 +67,17 @@ export const Navbar = () => {
           >
             <Link to="/">Personagens</Link>
           </li>
-          <li
-            className={`ml-8 hover:text-blue-500 ease-linear duration-300  ${
-              location.pathname.includes("character") && "text-blue-500"
-            }`}
-          >
-            <Link to={localStorage.getItem("last-url") ?? "/"}>
-              Último acesso
-            </Link>
-          </li>
+          {localStorage.getItem("last-url") && (
+            <li
+              className={`ml-8 hover:text-blue-500 ease-linear duration-300  ${
+                location.pathname.includes("character") && "text-blue-500"
+              }`}
+            >
+              <Link to={localStorage.getItem("last-url") ?? "/"}>
+                Último acesso
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
     </nav>

@@ -35,7 +35,7 @@ export const Home = () => {
             character.name.toLowerCase().includes(search.toLowerCase()) ||
             search === ""
           ) {
-            return <Person character={character} />;
+            return <Person key={character.name} character={character} />;
           }
         })}
       </div>
