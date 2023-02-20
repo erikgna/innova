@@ -7,6 +7,7 @@ Consiste em listar os personagens do Star Wars usando a API https://swapi.dev/
 Também era necessário mostrar informações adicionais de cada personagem e os filmes em que estão.
 
 Obs: Foram adicionadas fotos dos personagens e filmes por fora da API, por questões estéticas apenas.
+Obs2: Para visualizar informações dos filmes, basta passar o mouse pelo filme ou segurar o touch no celular.
 
 ## Installation
 
