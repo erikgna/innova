@@ -10,6 +10,7 @@ import { IPeople } from "../../interfaces/People";
 import { getCharacter, getMovie } from "../../services/api";
 import { CharacterImage } from "../../utils/CharacterImage";
 import { TranslateFromApi } from "../../utils/TranslateFromApi";
+import movieIcon from "../../assets/icons/movie-icon.svg";
 
 export const Character = () => {
   const location = useLocation();
@@ -57,7 +58,7 @@ export const Character = () => {
   const character = data.data as IPeople;
   return (
     <section className="max-w-7xl w-full flex flex-col min-h-screen pt-16 pb-4">
-      <div className="flex items-center">
+      <div className="flex items-center flex-col sm:flex-row">
         <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-600">
           <img
             className="w-full h-full object-contain"
@@ -65,7 +66,7 @@ export const Character = () => {
             alt={character.name}
           />
         </div>
-        <div className="ml-8">
+        <div className="ml-8 mt-6 sm:mt-0">
           <p className="text-white font-bold text-xl pb-4">{character.name}</p>
           <p className="text-gray-300">
             Sou do genêro {TranslateFromApi.translate(character.gender)}
@@ -76,13 +77,16 @@ export const Character = () => {
           </p>
         </div>
       </div>
-      <div className="w-full h-px bg-gray-400 mt-6 mb-2" />
+      <div className="w-full h-px bg-gray-400 mt-8 mb-2" />
       <div className="flex flex-col">
-        <h3 className="text-white text-xl font-semibold text-center mb-2 mt-3">
-          FILMES
-        </h3>
+        <div className="flex items-center self-center">
+          <img src={movieIcon} alt="Movies" className="h-6 w-6" />
+          <h3 className="text-white text-xl font-semibold mb-2 mt-3 ml-4">
+            FILMES
+          </h3>
+        </div>
 
-        <div className="flex items-center flex-wrap">
+        <div className="grid gap-y-12 sm:grid-cols-2 md:grid-cols-3 grid-cols-1 mt-8">
           {movies.map((movie) => (
             <Movie key={movie.title} movie={movie} />
           ))}
