@@ -24,7 +24,7 @@ export const Search = ({ value, handleChange }: ISearchProps) => {
         <input
           type="search"
           id="default-search"
-          className={`${styles.input} block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+          className={`${styles.input} block w-full p-4 pl-10 text-sm text-white border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#FAE314] focus:border-[#FAE314] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FAE314] dark:focus:border-[#FAE314]`}
           placeholder="Procurar personagem..."
           onChange={(e) => handleChange(e.target.value)}
           value={value}

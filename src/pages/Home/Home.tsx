@@ -26,7 +26,7 @@ export const Home = () => {
 
   const peoples = data?.data.results as IPeople[];
   return (
-    <section className="max-w-7xl w-full min-h-screen flex flex-col justify-center self-center pt-8 pb-4">
+    <section className="max-w-7xl w-full min-h-screen flex flex-col pt-16 pb-4">
       <Search value={search} handleChange={setSearch} />
 
       <div className="flex flex-col">
