@@ -1,0 +1,21 @@
+version: "3.7"
+
+name: start_wars
+
+networks:
+  web:
+    external: true
+
+services:
+  star_wars:
+    build: .
+    container_name: star_wars
+    networks:
+      - web
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.webclass.rule=Host(`starwars.erikna.com`)"
+      - "traefik.http.routers.webclass.entrypoints=web, websecure"
+      - "traefik.http.routers.webclass.tls=true"
+      - "traefik.http.routers.webclass.tls.certresolver=production"
