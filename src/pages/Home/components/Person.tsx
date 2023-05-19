@@ -17,7 +17,7 @@ export const Person = ({ character }: IPersonProps) => {
   const url = `/character/${character.url.slice(-2)}`;
   return (
     <Link key={character.name} to={url} onClick={() => saveLastUrl(url)}>
-      <div className="py-4 flex items-center">
+      <div className="py-4 flex items-center hover:bg-gray-700 pl-4 rounded transition-all duration-300">
         <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-600">
           <img
             className="w-full h-full object-contain"
@@ -28,7 +28,7 @@ export const Person = ({ character }: IPersonProps) => {
         <div className="ml-4">
           <p className="text-white font-semibold mb-2">{character.name}</p>
           <p className="text-gray-300 text-sm">
-            <strong>Genêro: </strong>
+            <strong>Gênero: </strong>
             {TranslateFromApi.translate(character.gender)}
           </p>
           <p className="text-gray-300 text-sm">
@@ -37,6 +37,7 @@ export const Person = ({ character }: IPersonProps) => {
           </p>
         </div>
       </div>
+
     </Link>
   );
 };

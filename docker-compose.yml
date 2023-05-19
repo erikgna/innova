@@ -1,6 +1,6 @@
 version: "3.7"
 
-name: start_wars
+name: star_wars
 
 networks:
   web:

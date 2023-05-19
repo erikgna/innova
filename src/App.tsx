@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Character } from "./pages/Character/Character";
 import { Home } from "./pages/Home/Home";
@@ -6,7 +6,7 @@ import { NotFound } from "./pages/NotFound/NotFound";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Navbar />
       <section className="flex justify-center bg-gray-800 px-4">
         <Routes>
@@ -15,7 +15,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
