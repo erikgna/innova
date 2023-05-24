@@ -15,7 +15,7 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.webclass.rule=Host(`starwars.erikna.com`)"
-      - "traefik.http.routers.webclass.entrypoints=web, websecure"
-      - "traefik.http.routers.webclass.tls=true"
-      - "traefik.http.routers.webclass.tls.certresolver=production"
+      - "traefik.http.routers.starwars.rule=Host(`starwars.erikna.com`)"
+      - "traefik.http.routers.starwars.entrypoints=web, websecure"
+      - "traefik.http.routers.starwars.tls=true"
+      - "traefik.http.routers.starwars.tls.certresolver=production"
